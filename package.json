@@ -1,0 +1,34 @@
+{
+  "name": "ExchangeFrontTest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm run setup",
+    "preprotractor": "npm run webdriver:update -- --standalone",
+    "protractor": "node ./node_modules/protractor/bin/protractor ./protractor.conf.js --silent",
+    "setup": "npm run typings -- install",
+    "test": "npm run protractor",
+    "typings": "typings",
+    "webdriver-manager": "node ./node_modules/protractor/bin/webdriver-manager",
+    "webdriver:update": "npm run webdriver-manager update"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/chai-as-promised": "^7.1.0",
+    "cucumber": "^1.3.2",
+    "protractor": "^5.4.1",
+    "serenity-cli": "^0.11.1",
+    "serenity-js": "^1.10.13",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-as-promised-compat": "^7.0.3",
+    "typings": "^2.1.1"
+  }
+}
